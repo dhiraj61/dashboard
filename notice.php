@@ -399,7 +399,7 @@ align-items: center;
         </div>
         <div class="right">
          <div class="right1" >
-     <H1>PUBLISH EVENTS</H1>
+     <H1 style="font-size:5vh;font-family:times new roman,times,serif">PUBLISH EVENTS</H1>
           <h1 class="text"></h1>
         
          
@@ -446,11 +446,11 @@ $emails=$_SESSION['email'];
             
             
             ?>
-         <div class="right2" style="padding-right:6vw;">
+         <div class="right2" style="padding-right:9vw;">
           
-          <h4><i class="ri-notification-3-line"></i></h4>
+         
           <div class="circle" style="">
-          <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i>   <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img']?>" alt="" width="58vw" height="56vw" style="position:absolute;right:9vw;border-radius:50%;border:none"></h4>
+          <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i>   <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img']?>" alt="" width="58vw" height="56vw" style="position:absolute;right:12vw;border-radius:50%;border:none"></h4>
           <div class="register" style="color:black;z-index:999999;position:absolute;background-color:white;right:1.8vw;width:11vw;">
     <h5 id="profileModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Profile</h5>
     <div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
@@ -560,7 +560,10 @@ if(isset($_POST['logout']))
               <h1>TIME TABLE</h1>
             </a>
             <a href="att_copy.php" class="att">
-              <h1>ATTENDENCE</h1>
+              <h1>ATTENDANCE</h1>
+            </a>
+            <a href="studattrep.php" class="att">
+              <h1>ATTENDANCE REPORT</h1>
             </a>
             <a href="learn.php" class="lean">
               <h1>LEARNING MATERIAL</h1>

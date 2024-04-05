@@ -294,16 +294,14 @@ z-index: 9999;
       .site-nav .site-navigation .site-menu .has-children > a {
         position: relative;
         padding-right: 20px; }
-        .site-nav .site-navigation .site-menu .has-children > a:before {
-          position: absolute;
-          content: "\e313";
+        /* .site-nav .site-navigation .site-menu .has-children > a:before {
           font-size: 14px;
           top: 50%;
           right: 0;
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-          font-family: 'icomoon'; }
+          font-family: 'icomoon'; } */
       .site-nav .site-navigation .site-menu .has-children .dropdown {
         visibility: hidden;
         opacity: 0;
@@ -361,7 +359,7 @@ z-index: 9999;
           .site-nav .site-navigation .site-menu .has-children .dropdown > li.active > a {
             color: #136ad5; }
           .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
-            content: "\e315";
+           
             right: 20px; }
           .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > ul {
             left: 100%;
@@ -511,7 +509,6 @@ z-index: 9999;
         font-size: 14px;
         z-index: 20;
         font-family: "icomoon";
-        content: "\e313";
         position: absolute;
         top: 50%;
         left: 50%;

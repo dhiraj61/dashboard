@@ -342,7 +342,7 @@ align-items: center;
         <div class="right">
          <div class="right1" >
           <!-- <h1><i class="fa-solid fa-bars"></i></h1> -->
-          <H1>CHECK STUDENTS</H1>
+          <H1 style="font-size:5vh;font-family:times new roman,times,serif">CHECK STUDENTS</H1>
           <h1 class="text"></h1>
         
          
@@ -392,7 +392,7 @@ $emails=$_SESSION['email'];
          
          <div class="right2" style="padding-right:6vw;">
           
-          <h4><i class="ri-notification-3-line"></i></h4>
+       
           <div class="circle" style="">
           <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i>   <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img']?>" alt="" width="58vw" height="56vw" style="position:absolute;right:9vw;border-radius:50%;border:none"></h4>
           <div class="register" style="color:black;z-index:999999;position:absolute;background-color:white;right:-1vw;width:11vw;">
@@ -498,7 +498,10 @@ echo "<script>window.open('login.php','_self')</script>";
               <h1>TIME TABLE</h1>
             </a>
             <a href="att_copy.php" class="att">
-              <h1>ATTENDENCE</h1>
+              <h1>ATTENDANCE</h1>
+            </a>
+            <a href="studattrep.php" class="att">
+              <h1>ATTENDANCE REPORT</h1>
             </a>
             <a href="learn.php" class="lean">
               <h1>LEARNING MATERIAL</h1>

@@ -1,39 +1,23 @@
 <?php
 
 session_start();
-
+if ($_SESSION['email'] == true) {
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+
+  <!DOCTYPE html>
+  <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
@@ -69,8 +53,8 @@ session_start();
         width: 18.8vw;
         height: 100%;
         border-bottom: 2px solid #000000;
-       background-color:#212631;
-;
+        background-color: #212631;
+        ;
       }
 
       .left h1 {
@@ -86,46 +70,50 @@ session_start();
       .right {
         width: 80.2vw;
         height: calc(100% - 30vw);
-display: flex;
-color:black;
-align-items: center;
-   justify-content: space-between;
-  
-    }
-    .right1{
-      width: 40vw;
-      display: flex;
-      align-items: center;
+        display: flex;
+        color: black;
+        align-items: center;
+        justify-content: space-between;
 
-  gap:8%;
-  margin-left: 2vw;
-     
-    }
-    .right1 h1{
-      font-size: 1.2vw;
-      font-weight: 200;
-      text-transform: capitalize;
-    
+      }
 
-   
-     
-    }
-    .right2{
-      width: 40.20vw;
-      display: flex;
-      align-items: center;
- justify-content: flex-end;
- padding-right: 4vw;
- gap:6%;
+      .right1 {
+        width: 40vw;
+        display: flex;
+        align-items: center;
 
-     
-    }
-    .right2 h1{
-      font-size: 1vw;
-    }
-   
-      .right h5{
-        color:#D3D4D6;
+        gap: 8%;
+        margin-left: 2vw;
+
+      }
+
+      .right1 h1 {
+        font-size: 1.2vw;
+        font-weight: 200;
+        text-transform: capitalize;
+
+
+
+
+      }
+
+      .right2 {
+        width: 40.20vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 4vw;
+        gap: 6%;
+
+
+      }
+
+      .right2 h1 {
+        font-size: 1vw;
+      }
+
+      .right h5 {
+        color: #D3D4D6;
       }
 
       .sidebarmain {
@@ -139,7 +127,7 @@ align-items: center;
         width: 19vw;
         height: 100%;
         overflow-y: scroll;
-       background-color:#212631;
+        background-color: #212631;
       }
 
       .sidebar .menus {
@@ -198,7 +186,7 @@ align-items: center;
       .contents {
         width: 100%;
         height: 82vh;
-    
+
         overflow-y: scroll;
       }
 
@@ -215,32 +203,35 @@ align-items: center;
         width: 18vw;
         height: 80%;
         background-color: #5856D6;
-        
+
         border-radius: 22px;
         position: relative;
       }
+
       .car:nth-child(2) {
         width: 18vw;
         height: 80%;
-        background-color:#3399FF;
+        background-color: #3399FF;
         border-radius: 22px;
-        
+
         position: relative;
       }
+
       .car:nth-child(3) {
         width: 18vw;
         height: 80%;
-        background-color: rgb(209,181,59);
+        background-color: rgb(209, 181, 59);
         border-radius: 22px;
-        
+
         position: relative;
       }
+
       .car:nth-child(4) {
         width: 18vw;
         height: 80%;
         background-color: #E55353;
         border-radius: 22px;
-        
+
         position: relative;
       }
 
@@ -259,118 +250,136 @@ align-items: center;
         display: none;
         transition: all 0.4s ease-in-out;
       }
-      .car:hover{
-    transform: translateY(-3px);
-    transition: all 0.5s ease;
+
+      .car:hover {
+        transform: translateY(-3px);
+        transition: all 0.5s ease;
       }
+
       .container2 {
-            width: 100%;
-            background-color:#ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color:black;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .form-row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-        .form-row label {
-            width: 150px;
-            margin-right: 10px;
-            flex-shrink: 0;
-            text-align: right;
-            padding-top: 5px;
-        }
-        .form-row input,
-        .form-row select,
-        .form-row textarea {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .form-row textarea {
-        
-            height: 80px;
-            resize: vertical;
-        }
-        .btn-row {
-            text-align: center;
-        }
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        .error-message {
-            color: #ff0000;
-            font-size: 0.9rem;
-            margin-top: 5px;
-        }
-        input,textarea,select {
-          outline: 1px solid black;
-        }
-        
-        table {
-                border-collapse: collapse;
-                width: 40%;
-                margin: 0 auto;
-            }
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: black;
+      }
 
-            th,
-            td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: center;
-            }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-            th {
-                background-color: #f2f2f2;
-            }
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
 
-            .tabless {
-                margin-top: 5vw;
-            }
+      .form-row label {
+        width: 150px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        text-align: right;
+        padding-top: 5px;
+      }
 
-            tr,
-            td,
-            th {
-                border: 2px solid black;
-            }
-            .register{
-          display:none;
-          background-color: black;
-        }
-        .circle:hover .register{
-          display:block;
-          transition:all 1s ease-in-out;
-          cursor:pointer;
-          background-color: black;
+      .form-row input,
+      .form-row select,
+      .form-row textarea {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
 
-          color:white;
-        }
-      .arrow4:hover{
-        rotate:(180deg);
-       
-        }
-        .register h5:hover{
-          background-color: #dadada;
-          border-radius:3px;
-          color:white;
-        }
+      .form-row textarea {
+
+        height: 80px;
+        resize: vertical;
+      }
+
+      .btn-row {
+        text-align: center;
+      }
+
+      .btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      .error-message {
+        color: #ff0000;
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+
+      input,
+      textarea,
+      select {
+        outline: 1px solid black;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 40%;
+        margin: 0 auto;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .tabless {
+        margin-top: 5vw;
+      }
+
+      tr,
+      td,
+      th {
+        border: 2px solid black;
+      }
+
+      .register {
+        display: none;
+        background-color: black;
+      }
+
+      .circle:hover .register {
+        display: block;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+        background-color: black;
+
+        color: white;
+      }
+
+      .arrow4:hover {
+        rotate: (180deg);
+
+      }
+
+      .register h5:hover {
+        background-color: #dadada;
+        border-radius: 3px;
+        color: white;
+      }
     </style>
   </head>
 
@@ -381,218 +390,217 @@ align-items: center;
           <h1>ACADEMIC FLOW</h1>
         </div>
         <div class="right">
-         <div class="right1" >
-          <!-- <h1><i class="fa-solid fa-bars"></i></h1> -->
-          <h1>Time Table</h1>
-          <h1 class="text"></h1>
-        
-         
-         </div>
-         <?php
-            require('connection.php');
-            if(isset($_POST['register']))
-            {
-$name=$_POST['adminName'];
+          <div class="right1">
+            <!-- <h1><i class="fa-solid fa-bars"></i></h1> -->
+            <h1 style="font-size:5vh;font-family:times new roman,times,serif">Time Table</h1>
+            <h1 class="text"></h1>
 
-$email=$_POST['email'];
-
-$password=$_POST['password'];
-
-$phoneNumber=$_POST['phoneNumber'];
-
-$image=$_FILES['image']['name'];
-
-$image_tmp=$_FILES['image']['tmp_name'];
-$folder="imge/".$image;
-
-move_uploaded_file($image_tmp,$folder);
-
-$query="insert into adminpage(name,email,password,phno,img) values('$name','$email','$password','$phoneNumber','$folder')";
-
-$result=mysqli_query($con,$query);
-
-if($result)
-{
-  echo "<script>alert('Registered Successfully');</script>";
-
-}
-            }
-            
-    $select="select * from adminpage";
-    $result1=mysqli_query($con,$select);
-    $imgs=mysqli_fetch_array($result1);
-    $counts=mysqli_num_rows($result1);
-$emails=$_SESSION['email'];
-    $select2="select * from adminpage  where email='$emails'";
-    $result2=mysqli_query($con,$select2);
-    $imgs2=mysqli_fetch_array($result2);
-  
-            
-            
-            ?>
-         <div class="right2" style="padding-right:6vw;">
-          
-          <h4><i class="ri-notification-3-line"></i></h4>
-          <div class="circle" style="">
-          <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i>   <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img']?>" alt="" width="58vw" height="56vw" style="position:absolute;right:9vw;border-radius:50%;border:none"></h4>
-          <div class="register" style="color:black;z-index:999999;position:absolute;background-color:white;right:1.8vw;width:11vw;">
-    <h5 id="profileModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Profile</h5>
-    <div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="profileModalLabel">Admin Profile</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="closeicon">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                   
-                    <img src="<?php echo $imgs2['img']?>" class="img-fluid rounded-circle mb-3" alt="Profile Image" style="width: 150px; height: 150px;">
-                    <table style="border:none;">
-                      <tr style="border:none;">
-                        <td style="border:none;">Name :</td>
-                        <td style="border:none;">
-                    <h4><?php echo $imgs2['name']?></h4>
-                    </td>
-                    </tr>
-                    <tr style="border:none;">
-                        <td style="border:none;">Email :</td>
-                        <td style="border:none;">
-                    <p><?php echo $imgs2['email']?></p>
-          </td>
-                    </tr>
-                    <tr style="border:none;"> 
-                      <td style="border:none;">Phone Number</td> <td style="border:none;"> <p><?php echo $imgs2['phno']?></p>
-                    </td> 
-                  </tr>
-
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<h5 id="registerModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Register</h5>
-            
-          
 
           </div>
-         
-          <div class="modal" id="registerModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Register Admin</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" class="closeit">&times;</span>
-                </button>
+          <?php
+          require('connection.php');
+          if (isset($_POST['register'])) {
+            $name = $_POST['adminName'];
+
+            $email = $_POST['email'];
+
+            $password = $_POST['password'];
+
+            $phoneNumber = $_POST['phoneNumber'];
+
+            $image = $_FILES['image']['name'];
+
+            $image_tmp = $_FILES['image']['tmp_name'];
+            $folder = "imge/" . $image;
+
+            move_uploaded_file($image_tmp, $folder);
+
+            $query = "insert into adminpage(name,email,password,phno,img) values('$name','$email','$password','$phoneNumber','$folder')";
+
+            $result = mysqli_query($con, $query);
+
+            if ($result) {
+              echo "<script>alert('Registered Successfully');</script>";
+            }
+          }
+
+          $select = "select * from adminpage";
+          $result1 = mysqli_query($con, $select);
+          $imgs = mysqli_fetch_array($result1);
+          $counts = mysqli_num_rows($result1);
+          $emails = $_SESSION['email'];
+          $select2 = "select * from adminpage  where email='$emails'";
+          $result2 = mysqli_query($con, $select2);
+          $imgs2 = mysqli_fetch_array($result2);
+
+
+
+          ?>
+          <div class="right2" style="padding-right:9vw;">
+
+
+            <div class="circle" style="">
+              <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i> <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img'] ?>" alt="" width="58vw" height="56vw" style="position:absolute;right:12vw;border-radius:50%;border:none"></h4>
+              <div class="register" style="color:black;z-index:999999;position:absolute;background-color:white;right:1.8vw;width:11vw;">
+                <h5 id="profileModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Profile</h5>
+                <div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="profileModalLabel">Admin Profile</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true" class="closeicon">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body text-center">
+
+                        <img src="<?php echo $imgs2['img'] ?>" class="img-fluid rounded-circle mb-3" alt="Profile Image" style="width: 150px; height: 150px;">
+                        <table style="border:none;">
+                          <tr style="border:none;">
+                            <td style="border:none;">Name :</td>
+                            <td style="border:none;">
+                              <h4><?php echo $imgs2['name'] ?></h4>
+                            </td>
+                          </tr>
+                          <tr style="border:none;">
+                            <td style="border:none;">Email :</td>
+                            <td style="border:none;">
+                              <p><?php echo $imgs2['email'] ?></p>
+                            </td>
+                          </tr>
+                          <tr style="border:none;">
+                            <td style="border:none;">Phone Number</td>
+                            <td style="border:none;">
+                              <p><?php echo $imgs2['phno'] ?></p>
+                            </td>
+                          </tr>
+
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 id="registerModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Register</h5>
+
+
+
+              </div>
+
+              <div class="modal" id="registerModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Register Admin</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="closeit">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="registerForm" method="post" action="" enctype="multipart/form-data">
+                        <div class="form-group">
+                          <label for="adminName">Admin Name</label>
+                          <input type="text" class="form-control" id="adminName" name="adminName" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="phoneNumber">Phone Number</label>
+                          <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
+                        </div>
+                        <div class="form-group">
+                          <label for="image">Image</label>
+                          <input type="file" class="form-control-file" id="image" name="image">
+                        </div>
+                        <input type="submit" name="register" value="Register" class="btn btn-success">
+
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="modal-body">
-            <form id="registerForm" method="post" action="" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="adminName">Admin Name</label>
-                        <input type="text" class="form-control" id="adminName" name="adminName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Image</label>
-                        <input type="file" class="form-control-file" id="image" name="image">
-                    </div>
-                   <input type="submit" name="register" value="Register" class="btn btn-success">
-                  
-                </form>
-            </div>
-           
-        </div>
-    </div>
-</div>
-         </div>
-         </div>
+          </div>
         </div>
         <form action="" method="post">
-          <input type="submit" name="logout" value="Logout" class="btn btn-danger" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;" >
+          <input type="submit" name="logout" value="Logout" class="btn btn-danger" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;">
         </form>
-<?php 
+        <?php
 
-if(isset($_POST['logout']))
-{
-  session_unset();
-  echo "<script>window.open('login.php','_self')</script>";
-}
+        if (isset($_POST['logout'])) {
+          session_unset();
+          echo "<script>window.open('login.php','_self')</script>";
+        }
 
-?>
+        ?>
       </div>
       <div class="sidebarmain">
         <div class="sidebar">
           <div class="menus">
             <a href="home.php" class="home">
-              <h1 >HOME</h1>
+              <h1>HOME</h1>
             </a>
             <a href="#" class="time">
               <h1>TIME TABLE</h1>
             </a>
             <a href="att_copy.php" class="att">
-              <h1>ATTENDENCE</h1>
+              <h1>ATTENDANCE</h1>
+            </a>
+            <a href="studattrep.php" class="att">
+              <h1>ATTENDANCE REPORT</h1>
             </a>
             <a href="learn.php" class="lean">
               <h1>LEARNING MATERIAL</h1>
             </a>
-            <a href="notice.php" class="note" >
+            <a href="notice.php" class="note">
               <h1 style="font-size:1.8vw;">Publish Notice</h1>
             </a>
 
-             <div>
+            <div>
               <a href="#">
-                <div
-                  style="
+                <div style="
                     display: flex;
                     align-items: center;
                     transition: all 0.4s ease-in-out;
-                  "
-                >
+                  ">
                   <h1 class="faculty">FACULTY</h1>
-                  <i
-                    class="ri-arrow-down-s-fill arrow1"
-                    style="font-size: 2vw; color: white"
-                  ></i>
+                  <i class="ri-arrow-down-s-fill arrow1" style="font-size: 2vw; color: white"></i>
                 </div>
               </a>
               <div class="dropdown" style="margin-left: 3vw; color: white">
-                <a href="addfac.php" style="text-decoration:none;color:white;"><h2>Add Faculty</h2></a>
-                <a href="checkfac.php" style="text-decoration:none;color:white;"><h2>Check Faculty</h2></a>
+                <a href="addfac.php" style="text-decoration:none;color:white;">
+                  <h2>Add Faculty</h2>
+                </a>
+                <a href="checkfac.php" style="text-decoration:none;color:white;">
+                  <h2>Check Faculty</h2>
+                </a>
               </div>
             </div>
             <div>
               <a href="#">
-                <div
-                  style="
+                <div style="
                     display: flex;
                     align-items: center;
                     transition: all 0.4s ease-in-out;
-                  "
-                >
+                  ">
                   <h1 class="student" style="font-size: 1.9vw">Students</h1>
-                  <i
-                    class="ri-arrow-down-s-fill arrow2"
-                    style="font-size: 2vw; color: white"
-                  ></i>
+                  <i class="ri-arrow-down-s-fill arrow2" style="font-size: 2vw; color: white"></i>
                 </div>
               </a>
               <div class="dropdown2" style="margin-left: 3vw; color: white">
-                <a href="addstu.php" style="text-decoration:none;color:white;"><h2>Add Student</h2></a>
-                <a href="checkstu.php" style="text-decoration:none;color:white;"><h2>Check Students</h2></a>
+                <a href="addstu.php" style="text-decoration:none;color:white;">
+                  <h2>Add Student</h2>
+                </a>
+                <a href="checkstu.php" style="text-decoration:none;color:white;">
+                  <h2>Check Students</h2>
+                </a>
               </div>
             </div>
           </div>
@@ -600,131 +608,137 @@ if(isset($_POST['logout']))
         <div class="content">
           <div class="nav"></div>
           <?php
-          
+
           require('connection.php');
-          $stu="select COUNT(student_id) as count from students";
-          $result=mysqli_query($con,$stu);
-          $row=mysqli_fetch_array($result);
+          $stu = "select COUNT(student_id) as count from students";
+          $result = mysqli_query($con, $stu);
+          $row = mysqli_fetch_array($result);
 
-          $fac_count="select COUNT(fac_id) as count from faculty";
-          $result1=mysqli_query($con,$fac_count);
-          $row1=mysqli_fetch_array($result1);
+          $fac_count = "select COUNT(fac_id) as count from faculty";
+          $result1 = mysqli_query($con, $fac_count);
+          $row1 = mysqli_fetch_array($result1);
 
-          $course="select COUNT(DISTINCT course) as count from students";
-          $result3=mysqli_query($con,$course);
-          $row2=mysqli_fetch_array($result3);
-          
+          $course = "select COUNT(DISTINCT course) as count from students";
+          $result3 = mysqli_query($con, $course);
+          $row2 = mysqli_fetch_array($result3);
+
           ?>
-        
+
 
           <div class="contents">
-          <div style="position:relative;top:5vw;overflow:hidden;" class="timetable">
-<h2 style="text-align: center;">Timetable Generator for 3 Sections</h2>
-    <div style="text-align: center;">
-        <label for="subjectInput">Enter Subject Names (comma separated):</label>
-        <input type="text" id="subjectInput">
-        <button onclick="generateTimetables()">Generate Timetable</button>
-    </div>
-    <div id="timetables" style="margin-top:3vw" >
-       
-    </div>
+            <div style="position:relative;top:5vw;overflow:hidden;" class="timetable">
+              <h2 style="text-align: center;">Timetable Generator for 3 Sections</h2>
+              <div style="text-align: center;">
+                <label for="subjectInput">Enter Subject Names (comma separated):</label>
+                <input type="text" id="subjectInput" required>
+                <button onclick="generateTimetables()">Generate Timetable</button>
+              </div>
+              <div id="timetables" style="margin-top:3vw">
 
-    </div> 
+              </div>
+
+            </div>
 
           </div>
         </div>
       </div>
+    <?php
+  } else {
+    echo "<script>window.open('login.php','_self')</script>";
+  }
+    ?>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-   
+
     <!-- Bootstrap JS (optional) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-<script src="scr.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="scr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script>
-       $(document).ready(function () {
-        $("#registerModalTrigger").click(function () {
-            $('#registerModal').modal('show');
+      $(document).ready(function() {
+        $("#registerModalTrigger").click(function() {
+          $('#registerModal').modal('show');
         });
-    });
-    $(document).ready(function () {
-            $("#profileModalTrigger").click(function () {
-                $('#profileModal').modal('show');
-            });
+      });
+      $(document).ready(function() {
+        $("#profileModalTrigger").click(function() {
+          $('#profileModal').modal('show');
         });
+      });
       var faculty = document.querySelector(".faculty");
       var dropdown = document.querySelector(".dropdown");
       var dropdown2 = document.querySelector(".dropdown2");
       var arrow1 = document.querySelector(".arrow1");
       var arrow2 = document.querySelector(".arrow2");
       var student = document.querySelector(".student");
-      var home=document.querySelector(".home");
-      var time=document.querySelector(".time");
-      var att=document.querySelector(".att");
-      var lean=document.querySelector(".lean");
-      var circle=document.querySelector('.circle');
-      var register=document.querySelector(".register");
-      var closeit=document.querySelector(".closeit");
-      var registerModal=document.querySelector("#registerModal");
-      var modal=document.querySelector(".modal");
-      var closeicon=document.querySelector(".closeicon");
-      var closeicon2=document.querySelector(".closeicon2");
-      var modal_backdrop=document.querySelector(".modal-backdrop .show");
-      var body=document.querySelector("body");
+      var home = document.querySelector(".home");
+      var time = document.querySelector(".time");
+      var att = document.querySelector(".att");
+      var lean = document.querySelector(".lean");
+      var circle = document.querySelector('.circle');
+      var register = document.querySelector(".register");
+      var closeit = document.querySelector(".closeit");
+      var registerModal = document.querySelector("#registerModal");
+      var modal = document.querySelector(".modal");
+      var closeicon = document.querySelector(".closeicon");
+      var closeicon2 = document.querySelector(".closeicon2");
+      var modal_backdrop = document.querySelector(".modal-backdrop .show");
+      var body = document.querySelector("body");
       console.log(modal);
-        console.log(closeicon);
-        closeicon.addEventListener("click",function(){
-          modal.style.display="none";
-          var backdropElement = document.querySelector('.modal-backdrop.show');
+      console.log(closeicon);
+      closeicon.addEventListener("click", function() {
+        modal.style.display = "none";
+        var backdropElement = document.querySelector('.modal-backdrop.show');
 
 
-if (backdropElement) {
-    
-    backdropElement.classList.remove('modal-backdrop');
+        if (backdropElement) {
 
-    backdropElement.classList.remove('show');
-}
-   
-        
-        })
-        closeit.addEventListener("click",function(){
-          var backdropElement = document.querySelector('.modal-backdrop.show');
-     
-          registerModal.style.display="none";
-         
-if (backdropElement) {
-    
-    backdropElement.classList.remove('modal-backdrop');
+          backdropElement.classList.remove('modal-backdrop');
 
-    backdropElement.classList.remove('show');
-}
-   
-          modal.style.opacity="0px";
-        })
-   
+          backdropElement.classList.remove('show');
+        }
+
+
+      })
+      closeit.addEventListener("click", function() {
+        var backdropElement = document.querySelector('.modal-backdrop.show');
+
+        registerModal.style.display = "none";
+
+        if (backdropElement) {
+
+          backdropElement.classList.remove('modal-backdrop');
+
+          backdropElement.classList.remove('show');
+        }
+
+        modal.style.opacity = "0px";
+      })
+
 
       var faculty = document.querySelector(".faculty");
       var dropdown = document.querySelector(".dropdown");
@@ -732,15 +746,15 @@ if (backdropElement) {
       var arrow1 = document.querySelector(".arrow1");
       var arrow2 = document.querySelector(".arrow2");
       var student = document.querySelector(".student");
-      var home=document.querySelector(".home");
-      var time=document.querySelector(".time");
-      var att=document.querySelector(".att");
-      var lean=document.querySelector(".lean");
-   
+      var home = document.querySelector(".home");
+      var time = document.querySelector(".time");
+      var att = document.querySelector(".att");
+      var lean = document.querySelector(".lean");
 
-      
+
+
       count = 1;
-      faculty.addEventListener("click", function () {
+      faculty.addEventListener("click", function() {
         if (count == 1) {
           dropdown.style.transition = "all 3s ease";
           dropdown.style.display = "block";
@@ -756,7 +770,7 @@ if (backdropElement) {
         }
       });
       count1 = 1;
-      student.addEventListener("click", function () {
+      student.addEventListener("click", function() {
         if (count1 == 1) {
           dropdown2.style.transition = "all 3s ease";
           dropdown2.style.display = "block";
@@ -772,94 +786,94 @@ if (backdropElement) {
         }
       });
       const form = document.getElementById('myForm');
-        form.addEventListener('submit', function(event) {
-            const inputs = form.querySelectorAll('input, select, textarea');
-            let isValid = true;
+      form.addEventListener('submit', function(event) {
+        const inputs = form.querySelectorAll('input, select, textarea');
+        let isValid = true;
 
-            inputs.forEach(input => {
-                if (!input.checkValidity()) {
-                    isValid = false;
-                    input.classList.add('error');
-                    const errorMessage = input.dataset.errorMessage || 'Please fill out this field.';
-                    const errorElement = document.createElement('div');
-                    errorElement.classList.add('error-message');
-                    errorElement.textContent = errorMessage;
-                    input.parentNode.insertBefore(errorElement, input.nextSibling);
-                } else {
-                    input.classList.remove('error');
-                    const errorElement = input.nextElementSibling;
-                    if (errorElement && errorElement.classList.contains('error-message')) {
-                        errorElement.remove();
-                    }
-                }
-            });
-
-            if (!isValid) {
-                event.preventDefault();
+        inputs.forEach(input => {
+          if (!input.checkValidity()) {
+            isValid = false;
+            input.classList.add('error');
+            const errorMessage = input.dataset.errorMessage || 'Please fill out this field.';
+            const errorElement = document.createElement('div');
+            errorElement.classList.add('error-message');
+            errorElement.textContent = errorMessage;
+            input.parentNode.insertBefore(errorElement, input.nextSibling);
+          } else {
+            input.classList.remove('error');
+            const errorElement = input.nextElementSibling;
+            if (errorElement && errorElement.classList.contains('error-message')) {
+              errorElement.remove();
             }
+          }
         });
-        function generateSectionTimetable(sectionName, subjects) {
-            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const hours = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM'];
-            const sectionTable = document.createElement('table');
-            const headerRow = document.createElement('tr');
-            const headerCell = document.createElement('th');
-            headerCell.textContent = sectionName;
-            headerCell.colSpan = 8;
-            headerRow.appendChild(headerCell);
-            sectionTable.appendChild(headerRow);
 
-            const timeHeaderRow = document.createElement('tr');
-            const timeHeaderCell = document.createElement('th');
-            timeHeaderCell.textContent = 'Time';
-            timeHeaderRow.appendChild(timeHeaderCell);
-            hours.forEach(hour => {
-                const hourHeaderCell = document.createElement('th');
-                hourHeaderCell.textContent = hour;
-                timeHeaderRow.appendChild(hourHeaderCell);
-            });
-            sectionTable.appendChild(timeHeaderRow);
+        if (!isValid) {
+          event.preventDefault();
+        }
+      });
 
-            days.forEach(day => {
-                const dayRow = document.createElement('tr');
-                const dayHeaderCell = document.createElement('th');
-                dayHeaderCell.textContent = day;
-                dayRow.appendChild(dayHeaderCell);
+      function generateSectionTimetable(sectionName, subjects) {
+        const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const hours = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM'];
+        const sectionTable = document.createElement('table');
+        const headerRow = document.createElement('tr');
+        const headerCell = document.createElement('th');
+        headerCell.textContent = sectionName;
+        headerCell.colSpan = 7;
+        headerRow.appendChild(headerCell);
+        sectionTable.appendChild(headerRow);
 
-                hours.forEach(() => {
-                    const cell = document.createElement('td');
-                    const subjectIndex = Math.floor(Math.random() * subjects.length);
-                    cell.textContent = subjects[subjectIndex];
-                    cell.setAttribute('contenteditable', 'true'); // Make cell editable
-                    dayRow.appendChild(cell);
-                });
+        const timeHeaderRow = document.createElement('tr');
+        const timeHeaderCell = document.createElement('th');
+        timeHeaderCell.textContent = 'Time';
+        timeHeaderRow.appendChild(timeHeaderCell);
+        hours.forEach(hour => {
+          const hourHeaderCell = document.createElement('th');
+          hourHeaderCell.textContent = hour;
+          timeHeaderRow.appendChild(hourHeaderCell);
+        });
+        sectionTable.appendChild(timeHeaderRow);
 
-                sectionTable.appendChild(dayRow);
-            });
+        days.forEach(day => {
+          const dayRow = document.createElement('tr');
+          const dayHeaderCell = document.createElement('th');
+          dayHeaderCell.textContent = day;
+          dayRow.appendChild(dayHeaderCell);
 
-            return sectionTable;
+          hours.forEach(() => {
+            const cell = document.createElement('td');
+            const subjectIndex = Math.floor(Math.random() * subjects.length);
+            cell.textContent = subjects[subjectIndex];
+            cell.setAttribute('contenteditable', 'true'); // Make cell editable
+            dayRow.appendChild(cell);
+          });
+
+          sectionTable.appendChild(dayRow);
+        });
+
+        return sectionTable;
+      }
+
+      function generateTimetables() {
+        const timetablesDiv = document.getElementById('timetables');
+        timetablesDiv.innerHTML = ''; // Clear existing timetables
+
+        const subjectInput = document.getElementById('subjectInput');
+        const subjectNames = subjectInput.value.split(',').map(s => s.trim()); // Get subject names from input field
+        const sections = ['Section A', 'Section B', 'Section C'];
+
+        if (subjectNames.length < 5) {
+          alert('Please provide at least 5 subject names separated by commas.');
+          return;
         }
 
-        function generateTimetables() {
-            const timetablesDiv = document.getElementById('timetables');
-            timetablesDiv.innerHTML = ''; // Clear existing timetables
-
-            const subjectInput = document.getElementById('subjectInput');
-            const subjectNames = subjectInput.value.split(',').map(s => s.trim()); // Get subject names from input field
-            const sections = ['Section A', 'Section B', 'Section C'];
-            
-            if (subjectNames.length < 3) {
-                alert('Please provide at least 3 subject names separated by commas.');
-                return;
-            }
-
-            sections.forEach(section => {
-                const sectionTable = generateSectionTimetable(section, subjectNames);
-                timetablesDiv.appendChild(sectionTable);
-            });
-        }
-    
-
+        sections.forEach(section => {
+          const sectionTable = generateSectionTimetable(section, subjectNames);
+          timetablesDiv.appendChild(sectionTable);
+        });
+      }
     </script>
   </body>
-</html>
+
+  </html>

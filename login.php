@@ -5,6 +5,7 @@ session_start();
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,14 +28,14 @@ session_start();
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylehh.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
   <title></title>
   <style>
-li{
-  list-style-type:none;
-}
+    li {
+      list-style-type: none;
+    }
   </style>
 </head>
 
@@ -50,26 +51,23 @@ li{
   </div>
 
 
-  
+
   <nav class="site-nav mb-5">
     <div class="pb-2 top-bar mb-3">
       <div class="container">
         <div class="row align-items-center">
 
           <div class="col-6 col-lg-9">
-            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block"></span></a> 
-            <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block"></span></a> 
-            <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block"></span></a> 
+            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block"></span></a>
+            <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block"></span></a>
+            <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block"></span></a>
           </div>
 
           <div class="col-6 col-lg-3 text-right">
-            <a href="login.html" class="small mr-3">
-              <span class="icon-lock"></span>
-              Log In
-            </a>
+
             <a href="register.html" class="small">
-              
-            
+
+
             </a>
           </div>
 
@@ -79,21 +77,21 @@ li{
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
-          <a href="index.html" class="logo menu-absolute m-0">AcademicFlow<span class="text-primary">.</span></a>
+          <!-- <a href="index.html" class="logo menu-absolute m-0"><span class="text-primary">.</span></a> -->
 
-     
-                </li>
-                <li><a href="#"></a></li>
-              </ul>
-            </li>
-            <li><a href="staff.html"></a></li>
-            <li><a href="news.html"></a></li>
-            <li><a href="gallery.html"></a></li>
-            <li><a href="about.html"></a></li>
-            <li class="active"><a href="contact.html"></a></li>
+
+          </li>
+          <li><a href="#"></a></li>
+          </ul>
+          </li>
+          <li><a href="staff.html"></a></li>
+          <li><a href="news.html"></a></li>
+          <li><a href="gallery.html"></a></li>
+          <li><a href="about.html"></a></li>
+          <li class="active"><a href="contact.html"></a></li>
           </ul>
 
-          <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
+
 
           <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
             <span></span>
@@ -103,7 +101,7 @@ li{
       </div>
     </div>
   </nav>
-  
+
 
   <div class="untree_co-hero inner-page overlay" style="background-image: url('images/img-school-5-min.jpg');">
     <div class="container">
@@ -132,10 +130,10 @@ li{
           <form action="" method="post" class="form-box">
             <div class="row">
               <div class="col-12 mb-3">
-                <input type="email" class="form-control" placeholder="Email" name="email">
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
               </div>
               <div class="col-12 mb-3">
-                <input type="password" class="form-control" placeholder="Password" name="pass">
+                <input type="password" class="form-control" placeholder="Password" name="pass" required>
               </div>
 
               <!-- <div class="col-12 mb-3">
@@ -147,61 +145,61 @@ li{
               </div> -->
 
               <div class="col-12">
-                <input type="submit" value="Log In" class="btn btn-primary" name="submit" >
+                <input type="submit" value="Log In" class="btn btn-primary" name="submit">
               </div>
             </div>
           </form>
         </div>
       </div>
 
-      
+
     </div>
-  </div> 
+  </div>
 
   <?php
-include 'connection.php';
-if(isset($_POST['submit'])){
+  include 'connection.php';
+  if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     $select = "SELECT * FROM adminpage";
     $result = mysqli_query($con, $select);
-    
+
     $loggedIn = false;
-    while($row = mysqli_fetch_array($result)) {
-        if($email == $row['email'] && $pass == $row['password']) {
-            $loggedIn = true;
-            $_SESSION['email'] = $email;
-            break; // Exit the loop once the user is logged in
-        }
+    while ($row = mysqli_fetch_array($result)) {
+      if ($email == $row['email'] && $pass == $row['password']) {
+        $loggedIn = true;
+        $_SESSION['email'] = $email;
+        break; // Exit the loop once the user is logged in
+      }
     }
-    
-    if($loggedIn) {
-        echo "<script>alert('Welcome')</script>";
-        echo "<script>window.open('home.php','_self')</script>";
+
+    if ($loggedIn) {
+      echo "<script>alert('Welcome')</script>";
+      echo "<script>window.open('home.php','_self')</script>";
     } else {
-        echo "<script>alert('Wrong email or password')</script>";
+      echo "<script>alert('Wrong email or password')</script>";
     }
-}
-?>
+  }
+  ?>
 
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/custom.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/custom.js"></script>
 
-  </body>
+</body>
 
-  </html>
+</html>

@@ -399,7 +399,7 @@ align-items: center;
         </div>
         <div class="right">
          <div class="right1" >
-     
+     <H1>PUBLISH EVENTS</H1>
           <h1 class="text"></h1>
         
          
@@ -538,7 +538,7 @@ $emails=$_SESSION['email'];
          </div>
         </div>
         <form action="" method="post">
-          <input type="submit" name="logout" value="Logout" class="btn btn-danger" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;" >
+          <input type="submit" name="logout" value="Logout" class="btn btn-primary" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;" >
         </form>
 <?php 
 

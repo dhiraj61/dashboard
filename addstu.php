@@ -341,7 +341,7 @@ align-items: center;
         <div class="right">
          <div class="right1" >
           <h1><i class="fa-solid fa-bars"></i></h1>
-          <h1>dashboard</h1>
+          <h1>ADD STUDENT</h1>
          
          </div>
          <?php

@@ -21,6 +21,15 @@ error_reporting(0);
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
     <style>
@@ -303,6 +312,28 @@ align-items: center;
         input,textarea,select {
           outline: 1px solid black;
         }
+        .register{
+          display:none;
+          background-color: black;
+        }
+        .circle:hover .register{
+          display:block;
+          transition:all 1s ease-in-out;
+          cursor:pointer;
+          background-color: black;
+
+          color:white;
+        }
+      .arrow4:hover{
+        rotate:(180deg);
+       
+        }
+        .register h5:hover{
+          background-color: #dadada;
+          border-radius:3px;
+          color:white;
+        }
+
     </style>
   </head>
 
@@ -320,11 +351,151 @@ align-items: center;
         
          
          </div>
-         <div class="right2">
+         <?php
+            require('connection.php');
+            if(isset($_POST['register']))
+            {
+$name=$_POST['adminName'];
+
+$email=$_POST['email'];
+
+$password=$_POST['password'];
+
+$phoneNumber=$_POST['phoneNumber'];
+
+$image=$_FILES['image']['name'];
+
+$image_tmp=$_FILES['image']['tmp_name'];
+$folder="imge/".$image;
+
+move_uploaded_file($image_tmp,$folder);
+
+$query="insert into adminpage(name,email,password,phno,img) values('$name','$email','$password','$phoneNumber','$folder')";
+
+$result=mysqli_query($con,$query);
+
+if($result)
+{
+  echo "<script>alert('Registered Successfully');</script>";
+
+}
+            }
+            
+    $select="select * from adminpage";
+    $result1=mysqli_query($con,$select);
+    $imgs=mysqli_fetch_array($result1);
+    $counts=mysqli_num_rows($result1);
+$emails=$_SESSION['email'];
+    $select2="select * from adminpage  where email='$emails'";
+    $result2=mysqli_query($con,$select2);
+    $imgs2=mysqli_fetch_array($result2);
+  
+            
+            
+            ?>
+         <div class="right2" style="padding-right:6vw;">
+          
           <h4><i class="ri-notification-3-line"></i></h4>
-          <h4><i class="fa-solid fa-circle" style="font-size:3.6vw;"></i></h4>
+          <div class="circle" style="">
+          <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i>   <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img']?>" alt="" width="58vw" height="56vw" style="position:absolute;right:9vw;border-radius:50%;border:none"></h4>
+          <div class="register" style="color:black;z-index:999999;position:absolute;background-color:white;right:1.8vw;width:11vw;">
+    <h5 id="profileModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Profile</h5>
+    <div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">Admin Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="closeicon">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                   
+                    <img src="<?php echo $imgs2['img']?>" class="img-fluid rounded-circle mb-3" alt="Profile Image" style="width: 150px; height: 150px;">
+                    <table>
+                      <tr>
+                        <td>Name :</td>
+                        <td>
+                    <h4><?php echo $imgs2['name']?></h4>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <td>
+                    <p><?php echo $imgs2['email']?></p>
+          </td>
+                    </tr>
+                    <tr> 
+                      <td>Phone Number</td> <td> <p><?php echo $imgs2['phno']?></p>
+                    </td> 
+                  </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<h5 id="registerModalTrigger" style="color: black; text-transform: capitalize; font-size: 1.4vw; width: 100%; cursor: pointer;">Register</h5>
+            
+          
+
+          </div>
+         
+          <div class="modal" id="registerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register Admin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="closeit">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form id="registerForm" method="post" action="" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="adminName">Admin Name</label>
+                        <input type="text" class="form-control" id="adminName" name="adminName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" class="form-control-file" id="image" name="image">
+                    </div>
+                   <input type="submit" name="register" value="Register" class="btn btn-success">
+                  
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>
+         </div>
          </div>
         </div>
+        <form action="" method="post">
+          <input type="submit" name="logout" value="Logout" class="btn btn-danger" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;" >
+        </form>
+<?php 
+
+if(isset($_POST['logout']))
+{
+  session_unset();
+  echo "<script>window.open('login.php','_self')</script>";
+}
+
+?>
       </div>
       <div class="sidebarmain">
         <div class="sidebar">
@@ -590,10 +761,87 @@ if(isset($_POST['search'])){
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+   
+    <!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script>
+        $(document).ready(function () {
+        $("#registerModalTrigger").click(function () {
+            $('#registerModal').modal('show');
+        });
+    });
+    $(document).ready(function () {
+            $("#profileModalTrigger").click(function () {
+                $('#profileModal').modal('show');
+            });
+        });
+      var faculty = document.querySelector(".faculty");
+      var dropdown = document.querySelector(".dropdown");
+      var dropdown2 = document.querySelector(".dropdown2");
+      var arrow1 = document.querySelector(".arrow1");
+      var arrow2 = document.querySelector(".arrow2");
+      var student = document.querySelector(".student");
+      var home=document.querySelector(".home");
+      var time=document.querySelector(".time");
+      var att=document.querySelector(".att");
+      var lean=document.querySelector(".lean");
+      var circle=document.querySelector('.circle');
+      var register=document.querySelector(".register");
+      var closeit=document.querySelector(".closeit");
+      var registerModal=document.querySelector("#registerModal");
+      var modal=document.querySelector(".modal");
+      var closeicon=document.querySelector(".closeicon");
+      var closeicon2=document.querySelector(".closeicon2");
+      var modal_backdrop=document.querySelector(".modal-backdrop .show");
+      var body=document.querySelector("body");
+      console.log(modal);
+        console.log(closeicon);
+        closeicon.addEventListener("click",function(){
+          modal.style.display="none";
+          var backdropElement = document.querySelector('.modal-backdrop.show');
+
+
+if (backdropElement) {
+    
+    backdropElement.classList.remove('modal-backdrop');
+
+    backdropElement.classList.remove('show');
+}
+   
+        
+        })
+        closeit.addEventListener("click",function(){
+          var backdropElement = document.querySelector('.modal-backdrop.show');
+     
+          registerModal.style.display="none";
+         
+if (backdropElement) {
+    
+    backdropElement.classList.remove('modal-backdrop');
+
+    backdropElement.classList.remove('show');
+}
+   
+          modal.style.opacity="0px";
+        })
+   
+
       var faculty = document.querySelector(".faculty");
       var dropdown = document.querySelector(".dropdown");
       var dropdown2 = document.querySelector(".dropdown2");

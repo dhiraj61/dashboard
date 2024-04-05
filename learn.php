@@ -457,6 +457,7 @@ session_start();
             <div class="right">
                 <div class="right1">
                     <!-- <h1><i class="fa-solid fa-bars"></i></h1> -->
+                    <H1>LEARNING MATERIAL</H1>
                     <h1 class="text"></h1>
 
 
@@ -506,7 +507,7 @@ $emails=$_SESSION['email'];
             ?>
          <div class="right2" style="padding-right:6vw;">
           
-          <h4><i class="ri-notification-3-line"></i></h4>
+          <h4><i class="ri-notification-3-line" style="font-size:1.7vw;   "></i></h4>
           <div class="circle" style="">
           <h4><i class="fa-solid fa-circle " id="ar" style="font-size:3.6vw;"></i>   <i class="ri-arrow-down-s-fill arrow4"> </i> <img src="<?php echo $imgs2['img']?>" alt="" width="58vw" height="56vw" style="position:absolute;right:10.3vw;border-radius:50%;border:none"></h4>
           <div class="register" style="color:black;z-index:999999;position:absolute;background-color:white;right:1.8vw;width:11vw;">
@@ -596,7 +597,7 @@ $emails=$_SESSION['email'];
          </div>
         </div>
         <form action="" method="post">
-          <input type="submit" name="logout" value="Logout" class="btn btn-danger" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;" >
+          <input type="submit" name="logout" value="Logout" class="btn btn-primary" style="margin-right:1vw;position:absolute;right:6px;top:1vw;width:6vw;font-size:1vw;" >
         </form>
 <?php 
 

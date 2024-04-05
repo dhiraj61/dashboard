@@ -345,6 +345,7 @@ align-items: center;
         <div class="right">
          <div class="right1" >
           <!-- <h1><i class="fa-solid fa-bars"></i></h1> -->
+          <h1>HOME</h1>
           <h1 class="text"></h1>
         
          
